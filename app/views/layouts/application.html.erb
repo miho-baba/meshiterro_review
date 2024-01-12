@@ -12,10 +12,13 @@
 
   <body>
     <header>
+      <%#= devise機能を使ってログインしているか、ログインしていないかを判断する %>
+      <%#= 下記は、ログイン済みの場合、 if user_signed_in? から else 間のコードが表示される記述 %>
       <% if user_signed_in? %>
         <li>
           <%= link_to "ログアウト", destroy_user_session_path, method: :delete %>
         </li>
+      <%#= 下記は、ログインしてない場合、 else から end 間のコードが表示される記述 %>
       <% else %>
         <li>
           <%= link_to "新規登録", new_user_registration_path %>
