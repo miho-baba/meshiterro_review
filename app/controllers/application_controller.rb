@@ -4,12 +4,12 @@ class ApplicationController < ActionController::Base
 
   # サインイン後にabout画面に遷移する
   def after_sign_in_path_for(resource)
-    about_path
+    homes_about_path
   end
 
   # サインアウト後にabout画面に遷移する
   def after_sign_out_path_for(resource)
-    about_path
+    homes_about_path
   end
 
   protected
