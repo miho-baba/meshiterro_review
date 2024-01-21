@@ -3,6 +3,9 @@ class PostImagesController < ApplicationController
     @post_image = PostImage.new
   end
 
+  def create
+  end
+
   def index
   end
 
