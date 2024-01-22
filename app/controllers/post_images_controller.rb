@@ -17,7 +17,7 @@ class PostImagesController < ApplicationController
   def show
   end
 
-  # 投稿データのストロングパラメータ
+  # 投稿データのストロングパラメータの記述
   private
 
   def post_image_params
