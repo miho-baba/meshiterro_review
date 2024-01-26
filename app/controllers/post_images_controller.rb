@@ -11,7 +11,9 @@ class PostImagesController < ApplicationController
     redirect_to post_images_path
   end
 
+  # 投稿データを全て取得する記述
   def index
+    @post_images = PostImage.all
   end
 
   def show
