@@ -2,9 +2,9 @@ class ApplicationController < ActionController::Base
   # devise利用の機能が使われる前にconfigure_permitted_parametersメソッドが実行される
   before_action :configure_permitted_parameters, if: :devise_controller?
 
-  # サインイン後にabout画面に遷移する
+  # サインイン後にindex画面に遷移する
   def after_sign_in_path_for(resource)
-    homes_about_path
+    post_images_path
   end
 
   # サインアウト後にabout画面に遷移する
