@@ -16,7 +16,9 @@ class PostImagesController < ApplicationController
     @post_images = PostImage.all
   end
 
+  # PostImageテーブルの中にあるidが（○○○）のレコードを取得する。
   def show
+    @post_image = PostImage.find(params[:id])
   end
 
   # 投稿データのストロングパラメータの記述
