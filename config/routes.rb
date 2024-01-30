@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   root to: "homes#top"
   devise_for :users
-  resources :post_images, only: [:new, :create, :index, :show]
+  resources :post_images, only: [:new, :create, :index, :show, :destroy]
   devise_scope :user do
     get '/users/sign_out' => 'devise/sessions#destroy'
   end
