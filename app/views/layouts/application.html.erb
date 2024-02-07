@@ -22,7 +22,7 @@
           <%= link_to 'マイページ', user_path(current_user.id) %>
         </li>
         <li>
-          <%= link_to "ログアウト", destroy_user_session_path, method: :delete %>
+          <%= button_to 'ログアウト', destroy_user_session_path, method: :delete %>
         </li>
       <%# 下記は、ログインしてない場合、 else から end 間のコードが表示される記述 %>
       <% else %>
