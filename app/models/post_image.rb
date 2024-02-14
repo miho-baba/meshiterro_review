@@ -3,6 +3,7 @@ class PostImage < ApplicationRecord
   has_one_attached :image
   # 下記の記述は、userに属しているという意味
   belongs_to :user
+  has_many :post_comments, dependent: :destroy
 
   def get_image
     unless image.attached?
