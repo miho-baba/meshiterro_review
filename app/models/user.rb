@@ -5,7 +5,7 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
   # 下記の記述は、たくさんpost_imageを持っているという意味である
   has_many :post_images, dependent: :destroy
-
+  has_many :post_comments, dependent: :destroy
   has_one_attached :profile_image
 
   # profile_imageという名前でActiveStorageでプロフィール画像を保存できるように設定。
