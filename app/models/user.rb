@@ -4,9 +4,10 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
   # 下記の記述は、たくさんpost_imageを持っているという意味である
+  has_one_attached :profile_image
   has_many :post_images, dependent: :destroy
   has_many :post_comments, dependent: :destroy
-  has_one_attached :profile_image
+  has_many :favorites, dependent: :destroy
 
   # profile_imageという名前でActiveStorageでプロフィール画像を保存できるように設定。
   def get_profile_image(width, height)
